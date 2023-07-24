@@ -1,0 +1,100 @@
+@use "../variables/index" as *;
+
+.contact {
+  background-color: $color-blue;
+  color: $color-white;
+  text-align: center;
+  padding: 5rem 2rem;
+
+  &__joined {
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    font-weight: $fw-2;
+    letter-spacing: 0.3rem;
+    font-size: $button-size;
+  }
+
+  &__heading {
+    font-size: $h2-size;
+    max-width: 30rem;
+    margin: 0 auto;
+    font-weight: $fw-2;
+    margin-bottom: 2.5rem;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__input {
+    position: relative;
+    margin-right: 1rem;
+
+    input {
+      padding: 1rem;
+      padding-right: 3rem;
+      border: 3px solid transparent;
+      border-radius: $btn-radius;
+      width: 100%;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 1rem;
+      display: none;
+    }
+
+    span {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: $color-red;
+      font-size: $button-size;
+      font-weight: $fw-2;
+      width: 100%;
+      display: block;
+      text-align: left;
+      font-style: italic;
+      padding: 0.5rem;
+      display: none;
+      border-radius: 0 0 $btn-radius $btn-radius;
+    }
+
+    &--error {
+      img {
+        display: block;
+      }
+      input {
+        border: 3px solid $color-red;
+        border-radius: $btn-radius $btn-radius 0 0;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &__button {
+    background-color: $color-red;
+    color: $color-white;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: $fw-2;
+    box-shadow: 10px 10px 45px -18px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 10px 45px -18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 45px -18px rgba(0, 0, 0, 0.75);
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    transition: all 0.2s;
+    &:hover {
+      border: 2px solid $color-red;
+      background-color: $color-white;
+      color: $color-red;
+    }
+  }
+}
