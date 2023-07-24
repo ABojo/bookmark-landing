@@ -1,0 +1,58 @@
+@use "../variables/index" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  max-width: $layout-max-width;
+  width: $layout-width;
+  margin: 0 auto;
+  margin-top: 3rem;
+
+  &__nav {
+    margin-left: auto;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: $fw-1;
+    color: $color-dark-blue;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    transition: all 0.2s;
+    display: block;
+
+    &:hover {
+      color: $color-red;
+    }
+
+    &--primary {
+      background-color: $color-red;
+      color: $color-white;
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
+      font-weight: $fw-2;
+      box-shadow: 10px 10px 45px -18px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 10px 10px 45px -18px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 45px -18px rgba(0, 0, 0, 0.75);
+      border: 2px solid transparent;
+
+      &:hover {
+        border: 2px solid $color-red;
+        background-color: $color-white;
+      }
+    }
+  }
+}
