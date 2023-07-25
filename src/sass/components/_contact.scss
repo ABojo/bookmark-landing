@@ -27,6 +27,21 @@
     justify-content: center;
   }
 
+  &__success {
+    font-weight: $fw-2;
+    font-size: $h3-size;
+    display: none;
+  }
+
+  &__form--submitted &__input,
+  &__form--submitted &__button {
+    display: none;
+  }
+
+  &__form--submitted &__success {
+    display: block;
+  }
+
   &__input {
     position: relative;
     margin-right: 1rem;
