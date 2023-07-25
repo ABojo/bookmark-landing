@@ -3,11 +3,14 @@ const classes = {
   formSubmitted: "contact__form--submitted",
   input: ".contact__input",
   inputError: "contact__input--error",
+  faqButton: ".faq__button",
+  faqItemOpen: "faq__item--open",
 };
 
 //elements
 const formElement = document.querySelector(classes.form);
 const formInputElement = document.querySelector(classes.input);
+const faqButtons = Array.from(document.querySelectorAll(classes.faqButton));
 
 function isValidEmail(email) {
   const emailRegex =
@@ -50,4 +53,10 @@ formElement.addEventListener("submit", (e) => {
 //clear errors after new input
 formInputElement.addEventListener("input", () => {
   display.removeInputError();
+});
+
+faqButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.parentElement.classList.toggle(classes.faqItemOpen);
+  });
 });

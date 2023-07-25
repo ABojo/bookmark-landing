@@ -1,0 +1,112 @@
+@use "../variables/index" as *;
+
+.faq {
+  text-align: center;
+  margin-top: 15rem;
+  margin-bottom: 10rem;
+
+  &__heading {
+    color: $color-dark-blue;
+    font-weight: $fw-2;
+    font-size: $h2-size;
+    margin-bottom: 2rem;
+  }
+
+  &__description {
+    color: $color-gray;
+    line-height: $line-height;
+    max-width: 32rem;
+    margin: 0 auto;
+    font-size: $body-size;
+    margin-bottom: 4rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    max-width: 32rem;
+    margin: 0 auto;
+  }
+
+  &__item {
+    width: 100%;
+    border-bottom: 1px solid rgba($color-gray, 0.5);
+    padding: 1.5rem 0;
+    text-align: left;
+
+    &:first-child {
+      border-top: 1px solid rgba($color-gray, 0.5);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    border: none;
+    color: $color-dark-blue;
+    font-weight: $fw-1;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+
+  &__arrow {
+    width: 18px;
+    height: 12px;
+    transition: all 0.2s;
+
+    path {
+      stroke: $color-blue;
+    }
+  }
+
+  &__body {
+    text-align: left;
+    color: $color-gray;
+    margin-top: 2rem;
+    display: block;
+    line-height: $line-height;
+    display: none;
+  }
+
+  &__item--open &__body {
+    display: block;
+  }
+
+  &__item--open &__arrow {
+    transform: rotate(180deg);
+    path {
+      stroke: $color-red;
+    }
+  }
+
+  &__info {
+    margin-top: 3rem;
+  }
+
+  &__info {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-dark-blue;
+    font-weight: $fw-2;
+    padding: 0.75rem 1.5rem;
+    border-radius: $btn-radius;
+    font-size: $button-size;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    background-color: $color-blue;
+    color: $color-white;
+
+    &:hover {
+      color: $color-blue;
+      border: 2px solid $color-blue;
+      background-color: $color-white;
+    }
+  }
+}
