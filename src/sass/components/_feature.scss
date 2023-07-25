@@ -1,0 +1,51 @@
+@use "../variables/index" as *;
+
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 27rem;
+  align-items: center;
+  margin-top: 2rem;
+
+  &__details {
+    text-align: left;
+    min-height: 416px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  &__heading {
+    color: $color-dark-blue;
+    font-size: $h2-size;
+    font-weight: $fw-2;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    color: $color-gray;
+    font-size: $body-size;
+    line-height: $line-height;
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-dark-blue;
+    font-weight: $fw-2;
+    padding: 0.75rem 1.5rem;
+    border-radius: $btn-radius;
+    font-size: $button-size;
+    border: 2px solid transparent;
+    transition: all 0.2s;
+    background-color: $color-blue;
+    color: $color-white;
+
+    &:hover {
+      color: $color-blue;
+      border: 2px solid $color-blue;
+      background-color: $color-white;
+    }
+  }
+}

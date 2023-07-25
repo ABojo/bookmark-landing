@@ -1,0 +1,60 @@
+@use "../variables/index" as *;
+
+.features {
+  text-align: center;
+  max-width: $layout-max-width;
+  width: $layout-width;
+  margin: 0 auto;
+  margin-top: 8rem;
+
+  &__heading {
+    color: $color-dark-blue;
+    font-size: $h2-size;
+    margin-bottom: 2rem;
+    font-weight: $fw-2;
+  }
+
+  &__description {
+    color: $color-gray;
+    max-width: 32rem;
+    margin: 0 auto;
+    font-size: $body-size;
+    line-height: $line-height;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    list-style-type: none;
+    max-width: 45rem;
+    border-bottom: 1px solid rgba($color-gray, 0.25);
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__button {
+    width: 100%;
+    font-size: $body-size;
+    color: $color-gray;
+    background-color: transparent;
+    border: none;
+    padding: 2rem 1rem;
+    font-weight: $fw-1;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-bottom: 4px solid transparent;
+
+    &:hover {
+      color: $color-red;
+    }
+
+    &--active {
+      border-bottom: 4px solid $color-red;
+      color: $color-dark-blue;
+    }
+  }
+}
