@@ -1,0 +1,66 @@
+@use "../variables/index" as *;
+
+.footer {
+  background-color: $color-dark-blue;
+  padding: 2rem;
+
+  &__container {
+    max-width: $layout-max-width;
+    width: $layout-width;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 4rem;
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+
+  &__nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: $fw-1;
+    color: $color-white;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    transition: all 0.2s;
+    display: block;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+
+  &__social-list {
+    margin-left: auto;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &__facebook {
+    height: 24px;
+    width: 24px;
+  }
+
+  &__twitter {
+    width: 24px;
+    height: 20px;
+  }
+}
