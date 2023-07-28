@@ -3,17 +3,37 @@
 .hero {
   display: grid;
   grid-template-columns: 30rem 1fr;
+  grid-gap: 5rem;
   align-items: center;
   max-width: $layout-max-width;
   width: $layout-width;
   margin: 0 auto;
   margin-top: 5.5rem;
 
+  @media (max-width: $bp-2) {
+    grid-template-columns: 25rem 1fr;
+  }
+
+  @media (max-width: $bp-3) {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  &__intro {
+    @media (max-width: $bp-3) {
+      grid-row: 2 / 3;
+    }
+  }
+
   &__heading {
     font-size: $h1-size;
     font-weight: $fw-2;
     margin-bottom: 1.5rem;
     color: $color-dark-blue;
+
+    @media (max-width: $bp-3) {
+      text-align: center;
+    }
   }
 
   &__text {
@@ -21,10 +41,20 @@
     color: $color-gray;
     line-height: 1.75rem;
     margin-bottom: 1.5rem;
+
+    @media (max-width: $bp-3) {
+      text-align: center;
+      max-width: 32rem;
+      margin-inline: auto;
+    }
   }
 
   &__links {
     display: flex;
+
+    @media (max-width: $bp-3) {
+      justify-content: center;
+    }
   }
 
   &__link {
@@ -58,10 +88,48 @@
       color: $color-blue;
       border: 2px solid $color-blue;
     }
+
+    @media (max-width: $bp-5) {
+      padding: 0.75rem 1rem;
+    }
+  }
+
+  &__graphic {
+    position: relative;
+
+    @media (max-width: $bp-3) {
+      justify-self: center;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -3rem;
+      right: -26rem;
+      display: block;
+      content: "";
+      width: 125%;
+      height: 80%;
+      border-top-left-radius: 10rem;
+      border-end-start-radius: 10rem;
+      background-color: $color-blue;
+      z-index: -1;
+      display: none;
+    }
   }
 
   &__screen {
-    margin-left: 5rem;
-    width: 105%;
+    margin: 0 auto;
+    display: block;
+    @media (max-width: $bp-1) {
+      width: 100%;
+    }
+
+    @media (max-width: $bp-3) {
+      width: 70%;
+    }
+
+    @media (max-width: $bp-6) {
+      width: 100%;
+    }
   }
 }

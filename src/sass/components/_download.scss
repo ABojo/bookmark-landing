@@ -5,6 +5,7 @@
   max-width: $layout-max-width;
   width: $layout-width;
   text-align: center;
+  margin-top: 15rem;
 
   &__heading {
     font-size: 2rem;
@@ -20,6 +21,10 @@
     font-size: $body-size;
     color: $color-gray;
     margin-bottom: 2rem;
+
+    @media (max-width: $bp-5) {
+      margin-bottom: 4rem;
+    }
   }
 
   &__cards {
@@ -28,6 +33,10 @@
     grid-gap: 2rem;
     max-width: 55rem;
     margin: 0 auto;
+
+    @media (max-width: $bp-5) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__card {
@@ -46,6 +55,16 @@
 
     &:nth-child(3) {
       top: 4rem;
+    }
+
+    @media (max-width: $bp-5) {
+      max-width: 20rem;
+      margin: 0 auto;
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 0;
+      }
     }
   }
 

@@ -25,6 +25,10 @@
   &__form {
     display: flex;
     justify-content: center;
+
+    @media (max-width: $bp-6) {
+      flex-direction: column;
+    }
   }
 
   &__success {
@@ -45,6 +49,11 @@
   &__input {
     position: relative;
     margin-right: 1rem;
+
+    @media (max-width: $bp-6) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
 
     input {
       padding: 1rem;
@@ -76,6 +85,11 @@
       padding: 0.5rem;
       display: none;
       border-radius: 0 0 $btn-radius $btn-radius;
+
+      @media (max-width: $bp-6) {
+        top: -2rem;
+        border-radius: $btn-radius $btn-radius 0 0;
+      }
     }
 
     &--error {

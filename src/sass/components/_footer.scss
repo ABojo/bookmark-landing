@@ -10,10 +10,19 @@
     margin: 0 auto;
     display: flex;
     align-items: center;
+
+    @media (max-width: $bp-3) {
+      flex-direction: column;
+    }
   }
 
   &__logo {
     margin-right: 4rem;
+
+    @media (max-width: $bp-3) {
+      margin-right: 0;
+      margin-bottom: 4rem;
+    }
   }
 
   &__nav {
@@ -24,11 +33,21 @@
     list-style-type: none;
     display: flex;
     align-items: center;
+
+    @media (max-width: $bp-3) {
+      margin-bottom: 4rem;
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 3rem;
+
+      @media (max-width: $bp-3) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -52,6 +71,11 @@
     list-style-type: none;
     display: flex;
     align-items: center;
+
+    @media (max-width: $bp-3) {
+      margin-left: 0;
+      gap: 2rem;
+    }
   }
 
   &__facebook {

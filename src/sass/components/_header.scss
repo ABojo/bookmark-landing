@@ -2,6 +2,7 @@
 
 .header {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   max-width: $layout-max-width;
   width: $layout-width;
@@ -9,7 +10,9 @@
   margin-top: 3rem;
 
   &__nav {
-    margin-left: auto;
+    @media (max-width: $bp-3) {
+      display: none;
+    }
   }
 
   &__list {

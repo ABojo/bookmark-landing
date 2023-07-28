@@ -2,8 +2,11 @@
 
 .faq {
   text-align: center;
+  margin: 0 auto;
   margin-top: 15rem;
   margin-bottom: 10rem;
+  max-width: $layout-max-width;
+  width: $layout-width;
 
   &__heading {
     color: $color-dark-blue;
