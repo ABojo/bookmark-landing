@@ -5,6 +5,7 @@
   grid-template-columns: 1fr 27rem;
   align-items: center;
   margin-top: 2rem;
+  grid-gap: 3rem;
 
   @media (max-width: $bp-3) {
     grid-template-columns: 1fr;
@@ -46,7 +47,55 @@
   }
 
   &__graphic {
-    width: 80%;
+    position: relative;
+    height: 22rem;
+    width: 100%;
+
+    @media (max-width: $bp-2) {
+      height: 15rem;
+    }
+
+    @media (max-width: $bp-3) {
+      height: unset;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: -3rem;
+      left: -26rem;
+      display: block;
+      content: "";
+      width: 132%;
+      height: 80%;
+      border-top-right-radius: 10rem;
+      border-end-end-radius: 10rem;
+      background-color: $color-blue;
+      z-index: -1;
+
+      @media (max-width: $bp-2) {
+        left: -15rem;
+      }
+
+      @media (max-width: $bp-3) {
+        top: 5rem;
+        bottom: 0;
+        left: -15rem;
+        height: 80%rem;
+        width: 100%;
+      }
+
+      @media (max-width: $bp-4) {
+        height: 80%;
+      }
+
+      @media (max-width: $bp-6) {
+        width: 140%;
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
 
     @media (max-width: $bp-3) {
       margin: 0 auto;

@@ -4,7 +4,7 @@ const classes = {
   featureButtonActive: "features__button--active",
   featureHeading: ".feature__heading",
   featureBody: ".feature__description",
-  featureImage: ".feature__graphic",
+  featureImage: ".feature__img",
   form: ".contact__form",
   formSubmitted: "contact__form--submitted",
   input: ".contact__input",
