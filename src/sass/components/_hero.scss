@@ -107,13 +107,33 @@
       right: -26rem;
       display: block;
       content: "";
-      width: 125%;
-      height: 80%;
+      width: 132%;
+      height: 75%;
       border-top-left-radius: 10rem;
       border-end-start-radius: 10rem;
       background-color: $color-blue;
       z-index: -1;
-      display: none;
+
+      @media (max-width: $bp-1) {
+        width: 150%;
+        bottom: 0rem;
+      }
+
+      @media (max-width: $bp-2) {
+        right: -15rem;
+      }
+
+      @media (max-width: $bp-3) {
+        top: 5rem;
+        bottom: 0;
+        right: -10rem;
+        height: 70%;
+        width: 100%;
+      }
+
+      @media (max-width: $bp-6) {
+        width: 125%;
+      }
     }
   }
 

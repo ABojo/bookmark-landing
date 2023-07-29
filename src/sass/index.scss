@@ -21,6 +21,11 @@ html {
   font-family: "Rubik", sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 button,
 input {
   font: inherit;
