@@ -13,17 +13,19 @@
   </head>
   <body>
     <header class="header">
-      <a class="header__logo" href="#">
+      <a class="header__logo" href="#" aria-label="Bookmark Home Page">
         <img src="assets/images/logo-bookmark.svg" alt="Bookmark Logo" />
       </a>
       <div class="mobile">
-        <button class="mobile__open">
+        <button class="mobile__open" aria-label="Open mobile navigation">
           <img src="assets/images/icon-hamburger.svg" alt="" />
         </button>
         <div class="mobile__overlay">
           <div class="mobile__head">
             <img class="mobile__logo" src="assets/images/logo-bookmark-light.svg" alt="Bookmark's Logo" />
-            <button class="mobile__close"><img src="assets/images/icon-close.svg" alt="" /></button>
+            <button class="mobile__close" aria-label="Close mobile navigation">
+              <img src="assets/images/icon-close.svg" alt="" />
+            </button>
           </div>
           <nav class="mobile__nav">
             <ul class="mobile__list">
@@ -43,14 +45,14 @@
           </nav>
           <ul class="mobile__social">
             <li>
-              <a class="mobile__link" href="" aria-label="Bookmark's Facebook">
+              <a class="mobile__link" href="#" aria-label="Bookmark's Facebook">
                 <svg class="mobile__facebook">
                   <use xlink:href="assets/images/social-sprites.svg#facebook"></use>
                 </svg>
               </a>
             </li>
             <li>
-              <a class="mobile__link" href="" aria-label="Bookmark's Twitter">
+              <a class="mobile__link" href="#" aria-label="Bookmark's Twitter">
                 <svg class="mobile__twitter">
                   <use xlink:href="assets/images/social-sprites.svg#twitter"></use>
                 </svg>
@@ -86,11 +88,11 @@
           </p>
           <div class="hero__links">
             <a class="hero__link hero__link--primary" href="#">Get it on Chrome</a>
-            <a class="hero__link" href="">Get it on Firefox</a>
+            <a class="hero__link" href="#">Get it on Firefox</a>
           </div>
         </div>
         <div class="hero__graphic">
-          <img class="hero__screen" src="assets/images/illustration-hero.svg" alt="" />
+          <img class="hero__screen" src="assets/images/illustration-hero.svg" alt="Bookmark software" />
         </div>
       </section>
       <section class="features">
@@ -101,13 +103,15 @@
         </p>
         <ul class="features__list">
           <li class="features__item">
-            <button class="features__button features__button--active">Simple Bookmarking</button>
+            <button class="features__button features__button--active" aria-label="Show simple bookmarking feature">
+              Simple Bookmarking
+            </button>
           </li>
           <li class="features__item">
-            <button class="features__button">Speedy Searching</button>
+            <button class="features__button" aria-label="Show speed searching feature">Speedy Searching</button>
           </li>
           <li class="features__item">
-            <button class="features__button">Easy Sharing</button>
+            <button class="features__button" aria-label="Show social sharing feature">Easy Sharing</button>
           </li>
         </ul>
         <div class="feature">
@@ -136,21 +140,21 @@
             <h3 class="download__card-heading">Add to Chrome</h3>
             <p class="download__version">Minimum version 62</p>
             <img class="download__dots" src="assets/images/bg-dots.svg" alt="" />
-            <a class="download__button" href="#">Add & Install Extension</a>
+            <a class="download__button" href="#" aria-label="Install extension for Chrome">Add & Install Extension</a>
           </div>
           <div class="download__card">
             <img class="download__logo" src="assets/images/logo-firefox.svg" alt="Firefox Logo" />
             <h3 class="download__card-heading">Add to Firefox</h3>
             <p class="download__version">Minimum version 55</p>
             <img class="download__dots" src="assets/images/bg-dots.svg" alt="" />
-            <a class="download__button" href="#">Add & Install Extension</a>
+            <a class="download__button" href="#" aria-label="Install extension Firefox">Add & Install Extension</a>
           </div>
           <div class="download__card">
             <img class="download__logo" src="assets/images/logo-opera.svg" alt="Opera Logo" />
             <h3 class="download__card-heading">Add to Opera</h3>
             <p class="download__version">Minimum version 46</p>
             <img class="download__dots" src="assets/images/bg-dots.svg" alt="" />
-            <a class="download__button" href="#">Add & Install Extension</a>
+            <a class="download__button" href="#" aria-label="Install extension for Opera">Add & Install Extension</a>
           </div>
         </div>
       </section>
@@ -225,13 +229,13 @@
             <img src="assets//images/icon-error.svg" alt="" />
             <span class="contact__error">Whoops! You must enter an email</span>
           </div>
-          <button type="submit" class="contact__button">Contact Us</button>
+          <button type="submit" class="contact__button" aria-label="Submit email">Contact Us</button>
         </form>
       </section>
     </main>
     <footer class="footer">
       <div class="footer__container">
-        <img class="footer__logo" src="assets/images/logo-bookmark-light.svg" alt="Bookmark Logo" />
+        <img class="footer__logo" src="assets/images/logo-bookmark-light.svg" alt="" />
         <nav clas="footer__nav">
           <ul class="footer__nav-list">
             <li class="footer__item">
