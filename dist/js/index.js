@@ -11,6 +11,10 @@ const classes = {
   inputError: "contact__input--error",
   faqButton: ".faq__button",
   faqItemOpen: "faq__item--open",
+  mobileNavOpen: ".mobile__open",
+  mobileNavClose: ".mobile__close",
+  mobileNavOverlay: ".mobile__overlay",
+  mobileNavVisible: "mobile__overlay--visible",
 };
 
 //list of features
@@ -42,6 +46,11 @@ const featureImage = document.querySelector(classes.featureImage);
 const formElement = document.querySelector(classes.form);
 const formInputElement = document.querySelector(classes.input);
 const faqButtons = Array.from(document.querySelectorAll(classes.faqButton));
+
+//mobile nav elements
+const mobileNavOpen = document.querySelector(classes.mobileNavOpen);
+const mobileNavClose = document.querySelector(classes.mobileNavClose);
+const mobileNavOverlay = document.querySelector(classes.mobileNavOverlay);
 
 //email validator
 function isValidEmail(email) {
@@ -85,7 +94,11 @@ const display = (function () {
     featureImage.src = currentFeature.imageUrl;
   }
 
-  return { showInputError, removeInputError, showFormSuccess, updateFeature };
+  function toggleMobileNav() {
+    mobileNavOverlay.classList.toggle(classes.mobileNavVisible);
+  }
+
+  return { showInputError, removeInputError, showFormSuccess, updateFeature, toggleMobileNav };
 })();
 
 //listener to display errors or success state
@@ -120,3 +133,7 @@ featureButtons.forEach((button, i) => {
     display.updateFeature(i);
   });
 });
+
+//hook up mobile nav buttons
+mobileNavOpen.addEventListener("click", display.toggleMobileNav);
+mobileNavClose.addEventListener("click", display.toggleMobileNav);

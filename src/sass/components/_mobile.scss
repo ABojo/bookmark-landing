@@ -1,0 +1,100 @@
+@use "../variables/index" as *;
+
+.mobile {
+  display: none;
+
+  @media (max-width: $bp-3) {
+    display: block;
+  }
+
+  &__open {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__overlay {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($color-dark-blue, 0.9);
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 2rem;
+    display: none;
+
+    &--visible {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__close {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__nav {
+    margin-top: 3rem;
+    margin-bottom: auto;
+  }
+
+  &__list {
+    list-style-type: none;
+    text-align: center;
+  }
+
+  &__item {
+    padding: 1.5rem;
+    border-bottom: 1px solid $color-gray;
+
+    &:first-child {
+      border-top: 1px solid $color-gray;
+    }
+  }
+
+  &__item--primary {
+    border: 2px solid $color-white;
+    border-radius: $btn-radius;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+
+  &__item--primary &__link {
+    font-weight: $fw-2;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $color-white;
+    text-decoration: none;
+    font-weight: $fw-1;
+    letter-spacing: 0.25rem;
+    font-size: $h3-size;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    list-style-type: none;
+    align-items: center;
+  }
+  &__facebook {
+    height: 24px;
+    width: 24px;
+    margin-right: 1.5rem;
+  }
+
+  &__twitter {
+    width: 24px;
+    height: 20px;
+  }
+}
